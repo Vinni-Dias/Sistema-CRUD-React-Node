@@ -1,0 +1,68 @@
+/* App.css */
+body {
+  background-color: #f8f9fa; /* Fundo cinza bem clarinho, quase branco */
+  color: #333333; /* Texto escuro para leitura fácil */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #6f42c1; /* Linha roxa moderna */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #555555;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #6f42c1; /* Hover em roxo */
+}
+
+.footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.footer strong {
+  color: #6f42c1;
+}
+
+/* Adicione no final do seu App.css */
+.btn-voltar-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: #f1f3f5;
+  color: #6f42c1;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar-home:hover {
+  background-color: #e2e6ea;
+  border-color: #6f42c1;
+  transform: translateX(-5px); /* Faz a setinha dar um pulinho pra esquerda */
+}
