@@ -20,7 +20,7 @@
 }
 
 .form-group label {
-  color: #6f42c1; /* Roxo principal */
+  color: #6f42c1; 
   font-weight: bold;
 }
 
@@ -36,13 +36,13 @@
 .form-group input:focus {
   outline: none;
   border-color: #6f42c1;
-  box-shadow: 0 0 5px rgba(111, 66, 193, 0.3); /* Brilho roxo ao clicar */
+  box-shadow: 0 0 5px rgba(111, 66, 193, 0.3); 
 }
 
 .btn-salvar {
   margin-top: 15px;
   padding: 12px;
-  background-color: #6f42c1; /* Botão roxo */
+  background-color: #6f42c1;
   color: white;
   border: none;
   border-radius: 4px;
@@ -53,5 +53,5 @@
 }
 
 .btn-salvar:hover {
-  background-color: #59339d; /* Roxo mais escuro ao passar o mouse */
+  background-color: #59339d; 
 }

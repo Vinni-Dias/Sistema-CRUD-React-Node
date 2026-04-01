@@ -1,11 +1,11 @@
 const db = require('../config/db');
 
-// CREATE (POST) - Adicionar um novo personagem no banco
+// CREATE
 const criarPersonagem = (req, res) => {
     // Pegando os dados que o React vai enviar
     const { nome, idade, classe, raca, nivel, campanha } = req.body;
 
-    // Validação exigida pelo edital
+
     if (!nome || !raca || !classe) {
         return res.status(400).json({ erro: 'Nome, raça e classe são obrigatórios para a ficha!' });
     }
@@ -20,7 +20,7 @@ const criarPersonagem = (req, res) => {
     });
 };
 
-// READ (GET) - Listar todos os personagens do banco
+// READ
 const listarPersonagens = (req, res) => {
     const query = 'SELECT * FROM personagens';
     
@@ -32,7 +32,7 @@ const listarPersonagens = (req, res) => {
     });
 };
 
-// READ (GET) - Visualização detalhada de um personagem específico
+// READ
 const buscarPersonagem = (req, res) => {
     const { id } = req.params;
     const query = 'SELECT * FROM personagens WHERE idPersonagens = ?';
@@ -48,7 +48,7 @@ const buscarPersonagem = (req, res) => {
     });
 };
 
-// UPDATE (PUT) - Atualizar um personagem no banco
+// UPDATE 
 const atualizarPersonagem = (req, res) => {
     const { id } = req.params;
     const { nome, idade, classe, raca, nivel, campanha } = req.body;
@@ -66,7 +66,7 @@ const atualizarPersonagem = (req, res) => {
     });
 };
 
-// DELETE (DELETE) - Remover um personagem do banco
+// DELETE
 const deletarPersonagem = (req, res) => {
     const { id } = req.params;
     const query = 'DELETE FROM personagens WHERE idPersonagens = ?';

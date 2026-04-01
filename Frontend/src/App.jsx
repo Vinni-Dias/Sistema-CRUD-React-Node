@@ -10,7 +10,6 @@ function App() {
     <BrowserRouter>
       <div className="app-container">
         
-        {/* Barra de Navegação com apenas UM botão para o início */}
         <nav className="navbar">
           <Link to="/" className="nav-link">⬅ Voltar ao Início</Link>
         </nav>

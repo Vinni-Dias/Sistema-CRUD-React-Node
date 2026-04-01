@@ -36,7 +36,6 @@ function Listagem() {
 
   return (
     <div>
-      {/* Aqui está a mágica: Título e Botão lado a lado! */}
       <div className="cabecalho-listagem">
         <h2 className="titulo-taverna">Taverna - Lista de Aventureiros</h2>
         <Link to="/cadastrar" className="btn-novo">➕ Novo Aventureiro</Link>

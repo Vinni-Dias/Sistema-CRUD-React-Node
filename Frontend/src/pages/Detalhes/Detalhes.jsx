@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import api from '../../services/api'; // Conectando com o backend!
+import api from '../../services/api'; 
 import './Detalhes.css';
 
 function Detalhes() {
   const { id } = useParams(); // Pega o ID da URL
-  const [personagem, setPersonagem] = useState(null); // Começa vazio até o banco responder
+  const [personagem, setPersonagem] = useState(null); 
 
   useEffect(() => {
     carregarDetalhes();
@@ -14,18 +14,17 @@ function Detalhes() {
   const carregarDetalhes = async () => {
     try {
       const resposta = await api.get(`/personagens/${id}`);
-      setPersonagem(resposta.data); // Preenche a ficha com os dados do MySQL
+      setPersonagem(resposta.data); 
     } catch (erro) {
       console.error("Erro ao buscar detalhes:", erro);
       alert("Erro ao desenrolar o pergaminho deste aventureiro!");
     }
   };
 
-  // Se o Axios ainda não trouxe os dados, mostra uma mensagem de carregando
   if (!personagem) {
     return (
       <div className="detalhes-container">
-        {/* Correção 1: Mudei a cor de 'white' para o nosso roxo, para não sumir no fundo branco! */}
+
         <h2 style={{ color: '#6f42c1', textAlign: 'center' }}>Lendo os registros da Taverna...</h2>
       </div>
     );
@@ -48,7 +47,6 @@ function Detalhes() {
       </div>
 
       <div className="botoes-acao">
-        {/* Correção 2: Mudei o link de "/" para "/listar" para ele voltar para a tabela! */}
         <Link to="/listar" className="btn-voltar">Voltar para a Taverna</Link>
         <Link to={`/editar/${personagem.idPersonagens}`} className="btn-editar">Editar Ficha</Link>
       </div>
